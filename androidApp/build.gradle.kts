@@ -45,4 +45,11 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
     debugImplementation(libs.compose.ui.tooling)
+
+    // we add our dependencies below
+    // Coil Image Loading Library
+    implementation(libs.coil.compose)
+
+    // Jetpack Compose Navigation Component
+    implementation(libs.androidx.navigation.compose)
 }
