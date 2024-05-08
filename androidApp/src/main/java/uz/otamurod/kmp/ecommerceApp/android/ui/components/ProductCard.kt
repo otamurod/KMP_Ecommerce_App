@@ -1,4 +1,4 @@
-package uz.otamurod.kmp.ecommerceApp.android
+package uz.otamurod.kmp.ecommerceApp.android.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -35,17 +35,22 @@ fun ProductCard(
         shape = RoundedCornerShape(size = 12.dp)
     ) {
         Column {
-            AsyncImage(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(300.dp),
-                model = ImageRequest.Builder(LocalContext.current)
-                    .data(product.image)
-                    .crossfade(true)
-                    .build(),
-                contentDescription = "Product Image",
-                contentScale = ContentScale.Crop
-            )
+            Surface(
+                modifier = Modifier.padding(all = 12.dp),
+                shape = RoundedCornerShape(size = 12.dp)
+            ) {
+                AsyncImage(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp),
+                    model = ImageRequest.Builder(LocalContext.current)
+                        .data(product.image)
+                        .crossfade(true)
+                        .build(),
+                    contentDescription = "Product Image",
+                    contentScale = ContentScale.Crop
+                )
+            }
             Column(modifier = Modifier.padding(all = 10.dp)) {
                 Text(
                     modifier = Modifier.padding(vertical = 10.dp),
